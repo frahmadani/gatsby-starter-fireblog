@@ -8,7 +8,6 @@
 </p>
 
 Hello there! 👋
-
 This is our Gatsby starter to help you develop your own blog on top of your [fireblog](https://fireblogcms.com/).
 Thanks to Gatsby you can have a fast as light speed blog!
 
@@ -27,14 +26,14 @@ You can find a demonstration here: https://fireblog-gatsby-starter.netlify.com
 - 🖼 Main post images are optimized and lazy loaded
 - 😅 Easy to install and use
 - 💄 Themable using CSS variables
-- ✨ Comes with a generated rss feed
+- ✨ Comes with a generated RSS feed
 - 📖 Paginated
 
 ## How to use it
 
 ### Install it
 
-First you have to install the starter, you have the choice to install gatsby CLI or not.
+First, you have to install the starter, you have the choice to install gatsby CLI or not.
 
 **with Gatsby CLI:**
 
@@ -59,15 +58,15 @@ Then you have to create an .env file based on .env.template and fill variables
 cp .env.template .env
 ```
 
-**This variable have to be set in order to make the starter works: `FIREBLOG_GRAPHQL_ENDPOINT`**
+**This variable has to be set to make the starter works: `FIREBLOG_GRAPHQL_ENDPOINT`**
 
 Environment variables are:
 
-| code                         | mandatory | description                                                                              |
-| ---------------------------- | --------- | ---------------------------------------------------------------------------------------- |
-| FIREBLOG_GRAPHQL_ENDPOINT    | yes       | fireblog endpoint, this endpoint can be found in your fireblog space.                    |
-| IFRAMELY_API_KEY             | no        | iframely is used to generate third parties iframe (twitter, soundclound, instagram, etc) |
-| GOOGLE_ANALYTICS_TRACKING_ID | no        | used to track usage of your blog into google analystics.                                 |
+| code | mandatory | description |
+| -- | -- | -- |
+| FIREBLOG_GRAPHQL_ENDPOINT | yes | fireblog endpoint, this endpoint can be found in your fireblog space. |
+| IFRAMELY_API_KEY | no | [iframely](https://iframely.com/) is used to generate third parties iframes (twitter, soundclound, instagram, etc) |
+| GOOGLE_ANALYTICS_TRACKING_ID | no | used to track usage of your blog into google analystics.|
 
 ### Hack it
 
@@ -79,13 +78,13 @@ All commonly modified informations are on top of the file.
 
 ### Netlify
 
-One of our favourite way to deploy a _fireblog_ is to use [Netlify](https://www.netlify.com/) : it deploys automatically your site on each `git push` on `master` branch, and also each time your blog content changes, thanks _webhooks_.
+One of our favourite way to deploy a _fireblog_ is to use [Netlify](https://www.netlify.com/) : it deploys automatically your site on each `git push` on `master` branch, and also each time your blog content changes, thanks to _webhooks_.
 
 ### Deploy on each `git push`
 
-After creating an account on Netlify, you can follow this step by step tutorial to deploy your blog : https://www.netlify.com/blog/2016/02/24/a-step-by-step-guide-gatsby-on-netlify/#connecting-to-netlify
+After creating an account on Netlify, you can follow this step by step tutorial to deploy your blog: https://www.netlify.com/blog/2016/02/24/a-step-by-step-guide-gatsby-on-netlify/#connecting-to-netlify
 
 ### Rebuild on content change
 
-1. Create a new "build hook" in your Netlify site : Settings > build & deploy > "Build hooks". Give it the name of your fireblog.
-2. Copy this build hook link (which will be something like: `https://api.netlify.com/build_hooks/5d9de461a22cc284xhhh96e3`) and paste it into your fireblog webhooks : Blog settings > "Webhooks".
+1. Create a new "build hook" in your Netlify site: Settings > build & deploy > "Build hooks". Give it the name of your fireblog.
+2. Copy this build hook link (which will be something like `https://api.netlify.com/build_hooks/5d9de461a22cc284xhhh96e3`) and paste it into your fireblog webhooks : Blog settings > "Webhooks".
