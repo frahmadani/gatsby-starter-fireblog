@@ -80,11 +80,11 @@ All commonly modified informations are on top of the file.
 
 One of our favourite way to deploy a _fireblog_ is to use [Netlify](https://www.netlify.com/) : it deploys automatically your site on each `git push` on `master` branch, and also each time your blog content changes, thanks to _webhooks_.
 
-### Deploy on each `git push`
+#### Deploy on each `git push`
 
 After creating an account on Netlify, you can follow this step by step tutorial to deploy your blog: https://www.netlify.com/blog/2016/02/24/a-step-by-step-guide-gatsby-on-netlify/#connecting-to-netlify
 
-### Rebuild on content change
+#### Rebuild on content change
 
 1. Create a new "build hook" in your Netlify site: Settings > build & deploy > "Build hooks". Give it the name of your fireblog.
 2. Copy this build hook link (which will be something like `https://api.netlify.com/build_hooks/5d9de461a22cc284xhhh96e3`) and paste it into your fireblog webhooks : Blog settings > "Webhooks".
