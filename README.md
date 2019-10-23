@@ -9,27 +9,26 @@
 
 Hello there! 👋
 
-This is our Gatsby starter, the purpose of this starter is to help you develop your own blog on top of your fireblog.
+This is our Gatsby starter to help you develop your own blog on top of your [fireblog](https://fireblogcms.com/).
 Thanks to Gatsby you can have a fast as light speed blog!
 
 You can find a demonstration here: https://fireblog-gatsby-starter.netlify.com
 
 ## Features
 
-- 📖 Paginated
-- 🖼 Main post images are optimized and lazy loaded
-- 📱 Works offline thanks to a service worker (the blog is a [PWA](https://developers.google.com/web/progressive-web-apps))
-- 😎 [AMP](https://developers.google.com/amp/?hl=fr) compatible
-- 😅 Easy to install and use
-- 💄 Themable using CSS variables
-- ✔ Very high score from [google lighthouse](https://developers.google.com/web/tools/lighthouse)
-- ✨ Comes with a generated rss feed
-
 <p align="center">
  <img width=300 src="https://user-images.githubusercontent.com/17828231/67390183-6b92d900-f59c-11e9-9669-95c0e401db00.png" alt="100% score in lighthouse" />
   <img width=300 src="https://user-images.githubusercontent.com/17828231/67390197-7483aa80-f59c-11e9-91d9-31d6f2f8cb64.png" alt="amp compatible" />
 </p>
 
+- ✔ Very high score from [google lighthouse](https://developers.google.com/web/tools/lighthouse)
+- 📱 Works offline thanks to a service worker (the blog is a [PWA](https://developers.google.com/web/progressive-web-apps))
+- 😎 [AMP](https://developers.google.com/amp/?hl=fr) compatible
+- 🖼 Main post images are optimized and lazy loaded
+- 😅 Easy to install and use
+- 💄 Themable using CSS variables
+- ✨ Comes with a generated rss feed
+- 📖 Paginated
 
 ## How to use it
 
@@ -64,11 +63,11 @@ cp .env.template .env
 
 Environment variables are:
 
-| code | mandatory | description |
-|--|--|--|
-| FIREBLOG_GRAPHQL_ENDPOINT | yes | fireblog endpoint, this endpoint can be found in your fireblog space. |
-| IFRAMELY_API_KEY | no | iframely is used to generate third parties iframe (twitter, soundclound, instagram, etc) |
-| GOOGLE_ANALYTICS_TRACKING_ID | no | used to track usage of your blog into google analystics. |
+| code                         | mandatory | description                                                                              |
+| ---------------------------- | --------- | ---------------------------------------------------------------------------------------- |
+| FIREBLOG_GRAPHQL_ENDPOINT    | yes       | fireblog endpoint, this endpoint can be found in your fireblog space.                    |
+| IFRAMELY_API_KEY             | no        | iframely is used to generate third parties iframe (twitter, soundclound, instagram, etc) |
+| GOOGLE_ANALYTICS_TRACKING_ID | no        | used to track usage of your blog into google analystics.                                 |
 
 ### Hack it
 
@@ -78,6 +77,15 @@ All commonly modified informations are on top of the file.
 
 ## Deploy
 
-### netlify
+### Netlify
 
-### github pages
+One of our favourite way to deploy a _fireblog_ is to use [Netlify](https://www.netlify.com/) : it deploys automatically your site on each `git push` on `master` branch, and also each time your blog content changes, thanks _webhooks_.
+
+### Deploy on each `git push`
+
+After creating an account on Netlify, you can follow this step by step tutorial to deploy your blog : https://www.netlify.com/blog/2016/02/24/a-step-by-step-guide-gatsby-on-netlify/#connecting-to-netlify
+
+### Rebuild on content change
+
+1. Create a new "build hook" in your Netlify site : Settings > build & deploy > "Build hooks". Give it the name of your fireblog.
+2. Copy this build hook link (which will be something like: `https://api.netlify.com/build_hooks/5d9de461a22cc284xhhh96e3`) and paste it into your fireblog webhooks : Blog settings > "Webhooks".
