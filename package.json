@@ -1,0 +1,74 @@
+{
+  "name": "gatsby-starter-fireblog",
+  "private": true,
+  "description": "A starter blog conntected to fireblog",
+  "version": "0.1.0",
+  "author": "Fabien JUIF <fabien.juif@gmail.com>",
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "gatsby": "^2.15.28",
+    "gatsby-image": "^2.2.24",
+    "gatsby-plugin-feed": "^2.3.15",
+    "gatsby-plugin-google-analytics": "^2.1.19",
+    "gatsby-plugin-html2amp": "^1.1.0",
+    "gatsby-plugin-load-script": "^1.0.6",
+    "gatsby-plugin-manifest": "^2.2.20",
+    "gatsby-plugin-offline": "^3.0.11",
+    "gatsby-plugin-react-helmet": "^3.1.10",
+    "gatsby-plugin-sharp": "^2.2.28",
+    "gatsby-plugin-typography": "^2.3.10",
+    "gatsby-source-filesystem": "^2.1.29",
+    "gatsby-source-graphql": "^2.1.17",
+    "gatsby-transformer-sharp": "^2.2.20",
+    "prismjs": "^1.17.1",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-helmet": "^5.2.1",
+    "react-icons": "^3.7.0",
+    "react-typography": "^0.16.19",
+    "typeface-roboto": "^0.0.75",
+    "typography": "^0.16.19"
+  },
+  "keywords": [
+    "gatsby",
+    "amp",
+    "pwa",
+    "fireblog",
+    "blog",
+    "cms",
+    "headless",
+    "starter"
+  ],
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "amp": "find public/amp -type f | xargs amphtml-validator",
+    "test": "npm run amp"
+  },
+  "devDependencies": {
+    "amphtml-validator": "^1.0.23",
+    "husky": ">=1",
+    "lint-staged": ">=8",
+    "prettier": "^1.18.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "singleQuote": true,
+    "semi": false,
+    "arrowParens": "always"
+  }
+}

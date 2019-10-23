@@ -1,0 +1,402 @@
+body,
+h1,
+h2,
+h3,
+h4,
+img,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+img {
+  font-family: var(--font-family);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: 0.4px;
+}
+
+a {
+  text-decoration: none;
+  box-shadow: none;
+  color: inherit;
+}
+
+ul {
+  margin: 0;
+}
+
+oembed {
+  width: 100%;
+}
+
+header {
+  grid-area: header;
+  background-color: var(--primary);
+  background: linear-gradient(280deg, var(--primary), var(--secondary));
+  padding-top: 4em;
+  padding-bottom: 4em;
+  text-align: center;
+  margin-bottom: 4em;
+}
+
+header a {
+  color: var(--fg-light);
+}
+
+main {
+  grid-area: main;
+  padding: 0 2em;
+  max-width: 60em;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+.menu {
+  grid-area: menu;
+  padding: 0;
+  margin: 0;
+  padding: 0 2em;
+  max-width: 30em;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: auto 25vw;
+  grid-template-areas:
+    'header header'
+    'main menu';
+}
+
+.list-posts {
+  max-width: 70vw;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.list-posts .post {
+  margin: 4em 0;
+  display: grid;
+  grid-template-columns: 30% auto;
+  grid-template-rows:
+    minmax(max-content, max-content) minmax(max-content, max-content)
+    auto auto;
+  grid-template-areas:
+    'image title'
+    'image published-at'
+    'image teaser'
+    'image read-more';
+  column-gap: 3em;
+  row-gap: 0.5em;
+}
+
+.list-posts .post:first-child {
+  margin-top: 0;
+}
+
+.list-posts .post:nth-child(2n) {
+  grid-template-columns: auto 30%;
+  grid-template-areas:
+    'title image'
+    'published-at image'
+    'teaser image'
+    'read-more image';
+}
+
+.list-posts .post .title {
+  grid-area: title;
+  font-weight: 400;
+  font-size: 23px;
+}
+
+.list-posts .post .title * {
+  color: var(--fg);
+}
+
+.list-posts .post .published-at {
+  grid-area: published-at;
+}
+
+.list-posts .post .read-more {
+  grid-area: read-more;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: var(--a11y-primary);
+  align-self: end;
+}
+
+.list-posts .post .teaser {
+  grid-area: teaser;
+  text-align: justify;
+}
+
+.list-posts .post .read-more {
+  grid-area: read-more;
+}
+
+.list-posts .post .image {
+  grid-area: image;
+  align-self: center;
+}
+
+.post.full .title {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+
+.post .image img {
+  box-shadow: 0px 0px 10px -8px black;
+  align-self: center;
+}
+
+.post figure,
+.post.full .image {
+  max-width: 800px;
+  margin: 3em auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.post figure figcaption {
+  margin-top: 1em;
+  font-size: 0.8em;
+  font-style: italic;
+  text-align: center;
+}
+
+.post .teaser,
+.post .content {
+  color: #333333;
+  letter-spacing: 0.4px;
+  line-height: 25px;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.post.full {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.post .published-at {
+  color: #555555;
+  display: flex;
+  align-items: center;
+}
+
+.post .published-at .icon {
+  margin-right: 0.5em;
+}
+
+.post .content strong {
+  font-weight: 500;
+}
+
+.post .content p {
+  margin: 1em 0;
+  text-align: justify;
+}
+
+.post .content h1,
+.post .content h2,
+.post .content h3,
+.post .content h4,
+.post .content h5 {
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.post .content a {
+  color: var(--a11y-primary);
+  font-weight: 400;
+  box-shadow: 0px 1px 2px -1px var(--a11y-primary);
+}
+
+.post .content a:hover {
+  box-shadow: 0px 1px 1px 0px var(--a11y-primary);
+}
+
+.post .navigation {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0;
+  margin-top: 3em;
+  border-top: 1px solid var(--primary);
+  padding-top: 1em;
+}
+
+.post .author {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 3em;
+}
+
+.post .author .avatar {
+  width: 5em;
+  height: 5em;
+  border-radius: 100%;
+  border: 2px solid var(--secondary);
+  overflow: hidden;
+  box-sizing: content-box;
+  margin-right: 1em;
+}
+
+.gotop {
+  position: fixed;
+  bottom: 0.5em;
+  right: 0.5em;
+  background: linear-gradient(280deg, var(--primary), var(--secondary));
+  width: 1em;
+  height: 1em;
+  box-shadow: 5px 5px 17px -13px black;
+  border-radius: 100%;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: -1em;
+  color: white;
+  font-size: 3em;
+}
+
+.menu .block {
+  margin-top: 4em;
+}
+
+.menu .block:first-child {
+  margin-top: 0;
+}
+
+.menu .block > h3 {
+  font-size: 1.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  position: relative;
+}
+
+.menu .block > h3:after {
+  content: '';
+  width: 3em;
+  height: 0.2em;
+  background: #d1d1d1;
+  position: absolute;
+  left: 0;
+  bottom: -0.5em;
+}
+
+.menu .block .list {
+  list-style-type: none;
+}
+
+.recent-posts .post {
+  display: flex;
+  align-items: center;
+  margin: 2em 0;
+}
+
+.recent-posts .post .image {
+  width: 4em;
+  max-height: 4em;
+  min-width: 4em;
+}
+
+.recent-posts .post .image.empty {
+  background: linear-gradient(240deg, var(--primary), var(--secondary));
+  height: 4em;
+  border-radius: 5px;
+}
+
+.recent-posts .post .infos {
+  margin-left: 1em;
+}
+
+.recent-posts .post .title {
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+}
+
+.socials .list {
+  font-size: 4em;
+  display: flex;
+  margin-top: 0.5em;
+  color: var(--primary);
+  align-items: center;
+}
+
+.socials .list li {
+  margin-left: 0.5em;
+}
+
+.socials .list li:first-child {
+  margin-left: 0;
+}
+
+.pages {
+  list-style: none;
+  display: flex;
+  color: var(--a11y-primary);
+  align-items: center;
+  justify-content: center;
+}
+
+.pages .page {
+  margin: 0.5em;
+  padding: 1em;
+}
+
+@media (max-width: 1000px) {
+  .layout {
+    grid-template-columns: auto;
+    grid-template-areas:
+      'header'
+      'main';
+  }
+
+  .menu {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .list-posts .post,
+  .list-posts .post:nth-child(2n) {
+    margin: 4em 0;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr auto auto auto;
+    grid-template-areas:
+      'title'
+      'published-at'
+      'image'
+      'teaser'
+      'read-more';
+    column-gap: 3em;
+  }
+
+  .list-posts .post .image {
+    margin-bottom: 1em;
+  }
+}
